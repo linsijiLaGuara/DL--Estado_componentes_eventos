@@ -6,7 +6,7 @@ function Registro() {
 
   return (
     <>
-      <h1>Crea una cuenta</h1>
+  
       <Formulario />
     </>
   );
