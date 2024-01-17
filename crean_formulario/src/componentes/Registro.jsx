@@ -1,16 +1,14 @@
-// Registro.js
 import React from "react";
-import "./App.css";
-import Formulario from "../src/componentes/Formulario";
-import SocialButton from "../src/componentes/SocialButton";
+import Formulario from "./Formulario";
+import SocialButton from "./SocialButton";
+import { icon } from "@fortawesome/fontawesome-svg-core";
 
 const Registro = () => {
   return (
     <>
-      <SocialButton />
+      <SocialButton icon={icon} />
       <Formulario />
     </>
   );
 };
-
 export default Registro;

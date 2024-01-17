@@ -1,6 +1,6 @@
-import "./App.css";
-import Registro from "../src/componentes/Formulario";
 
+import Registro from "./componentes/Registro";
+import "./App.css"
 function App() {
   return (
     <>
