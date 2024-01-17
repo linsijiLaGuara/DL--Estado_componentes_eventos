@@ -1,0 +1,11 @@
+.form-regist{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+Button{
+  color: aquamarine;
+
+}
