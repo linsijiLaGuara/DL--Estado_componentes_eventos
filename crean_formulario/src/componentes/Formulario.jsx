@@ -14,7 +14,7 @@ const Formulario = () => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <h1 className="title-text">Crea una cuenta</h1>
+    
         <div className="form-regist">
           <input
             type="text"

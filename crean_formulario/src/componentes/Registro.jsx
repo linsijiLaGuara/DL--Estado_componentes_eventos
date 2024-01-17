@@ -1,15 +1,16 @@
+// Registro.js
+import React from "react";
 import "./App.css";
 import Formulario from "../src/componentes/Formulario";
+import SocialButton from "../src/componentes/SocialButton";
 
-function Registro() {
-
-
+const Registro = () => {
   return (
     <>
-  
+      <SocialButton />
       <Formulario />
     </>
   );
-}
+};
 
 export default Registro;
