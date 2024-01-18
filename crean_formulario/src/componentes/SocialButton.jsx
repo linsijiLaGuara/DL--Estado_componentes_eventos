@@ -13,12 +13,12 @@ export const SocialButton = ({ icons }) => {
       <h1 className="title-text">Crea una cuenta</h1>
       <div className="iconsFGL">
 
-      <FontAwesomeIcon icon="fa-brands fa-facebook" />
-      <FontAwesomeIcon icon="fa-brands fa-github" />
-      <FontAwesomeIcon icon="fa-brands fa-linkedin" />
+        <FontAwesomeIcon icon="fa-brands fa-facebook" />
+        <FontAwesomeIcon icon="fa-brands fa-github" />
+        <FontAwesomeIcon icon="fa-brands fa-linkedin" />
       </div>
-      
-      
+
+
     </>
   );
 };
