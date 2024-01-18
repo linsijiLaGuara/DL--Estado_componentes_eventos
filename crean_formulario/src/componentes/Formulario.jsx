@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Formulario.css";
 import Button from "react-bootstrap/Button";
 
-const Formulario = () => {
+const Formulario = (alerta) => {
   const [nombre, setNombre] = useState("");
   const [tuemail, setTuemail] = useState("");
   const [password, setPassword] = useState("");
@@ -14,14 +14,13 @@ const Formulario = () => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-    
-        <div className="form-regist">
+
+        <div className="form-regist" onSubmit={alerta}>
           <input
             type="text"
-            value={nombre}
-            onChange={(e) => setNombre(e.target.value)}
-            placeholder="Nombre"
-          />
+            name= {nombre}
+            onChange={(e) => console.log(setNombre(e.target.value))}
+            placeholder="Nombre" />
           <input
             type="email"
             value={tuemail}
