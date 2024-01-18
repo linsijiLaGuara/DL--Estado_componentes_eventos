@@ -15,7 +15,7 @@ const Formulario = ({ onSubmit }) => {
     if (nombre === '' || tuemail === '' || password === '' || configPassword === '') {
       setAlertMessage("Debe completar todos los campos.");
     } else {
-  
+
       setAlertMessage("¡Registro exitoso!");
     }
 
@@ -23,7 +23,7 @@ const Formulario = ({ onSubmit }) => {
   };
   return (
     <>
-        <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <div className="form-regist">
           <input
             type="text"

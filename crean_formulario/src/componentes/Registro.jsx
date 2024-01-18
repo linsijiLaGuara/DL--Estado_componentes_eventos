@@ -6,7 +6,7 @@ import "./Registro.css";
 
 function Registro() {
   const [alertMessage, setAlertMessage] = useState("");
-  const socialIcons = ["Facebook", "Github", "Linkedin"];
+  const socialIcons = ["facebook", "github", "linkedin"];
 
   const handleAlert = (message) => {
     setAlertMessage(message);

@@ -5,7 +5,7 @@ import "./SocialButton.css"
 
 
 
-export const SocialButton = ({ icons }) => {
+ const SocialButton = ({ icons }) => {
   const [facebook, github, linkedin] = icons;
 
   return (
@@ -23,5 +23,6 @@ export const SocialButton = ({ icons }) => {
     </>
   );
 };
+export default SocialButton;
 
 
