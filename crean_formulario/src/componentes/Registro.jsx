@@ -1,9 +1,9 @@
 import React from "react";
 import Formulario from "./Formulario";
-import SocialButton from "./SocialButton";
+import {SocialButton} from "./SocialButton";
 
-const Registro = () => {
-  const socialIcons = ["facebook", "github", "linkedin"];
+function Registro() {
+  const socialIcons = ['Facebook', 'Github', 'Linkedin'];
   return (
     <>
       <SocialButton icons={socialIcons} />
