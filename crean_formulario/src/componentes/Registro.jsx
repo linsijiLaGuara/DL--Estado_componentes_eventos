@@ -1,12 +1,12 @@
 import React from "react";
 import Formulario from "./Formulario";
 import SocialButton from "./SocialButton";
-import { icon } from "@fortawesome/fontawesome-svg-core";
 
 const Registro = () => {
+  const socialIcons = ["facebook", "github", "linkedin"];
   return (
     <>
-      <SocialButton icon={icon} />
+      <SocialButton icons={socialIcons} />
       <Formulario />
     </>
   );
