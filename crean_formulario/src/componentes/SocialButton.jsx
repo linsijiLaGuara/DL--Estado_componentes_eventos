@@ -16,8 +16,9 @@ export const SocialButton = ({ icons }) => {
         <FontAwesomeIcon icon="fa-brands fa-facebook" />
         <FontAwesomeIcon icon="fa-brands fa-github" />
         <FontAwesomeIcon icon="fa-brands fa-linkedin" />
-      </div>
 
+      </div>
+      <p className="subtitle">o usa tu email para registrarte</p>
 
     </>
   );
