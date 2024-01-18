@@ -11,18 +11,41 @@ const Formulario = ({ onAlert }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-//validando los datos que no esten vacios
-    if (nombre === '' || tuemail === '' || password === '' || configPassword === '') {
-      onAlert ("Debe completar todos los campos.");
+    //condicional que valida los campos que n o esten vacios
+    if (
+      nombre === "" ||
+      tuemail === "" ||
+      password === "" ||
+      configPassword === ""
+    ) {
+      onAlert("Debe completar todos los campos.");
+    } else if (!validateEmail(tuemail)) {
+      onAlert("Ingrese un correo electrónico válido.");
+    } else if (!validatePassword(password)) {
+      onAlert("La contraseña no cumple con los requisitos mínimos.");
+    } else if (password !== configPassword) {
+      onAlert("Las contraseñas no coinciden.");
     } else {
-      // Lógica de registro exitoso
       onAlert("¡Registro exitoso!");
     }
   };
 
+  const validateEmail = (email) => {
+    // Expresión regular para validar el formato del correo electrónico
+    const expresionRegularEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return expresionRegularEmail.test(email);
+  };
+
+  const validatePassword = (password) => {
+    // Expresión regular para validar el formato password
+    const expresionRegularPassword=
+      /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{5,}$/;
+    return expresionRegularPassword.test(password);
+  };
+
   return (
     <>
-        <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <div className="form-regist">
           <input
             type="text"
