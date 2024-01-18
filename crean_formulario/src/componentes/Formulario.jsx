@@ -11,9 +11,9 @@ const Formulario = ({ onAlert }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+//validando los datos que no esten vacios
     if (nombre === '' || tuemail === '' || password === '' || configPassword === '') {
-      onAlert("Debe completar todos los campos.");
+      onAlert ("Debe completar todos los campos.");
     } else {
       // Lógica de registro exitoso
       onAlert("¡Registro exitoso!");
