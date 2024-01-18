@@ -1,9 +1,17 @@
+/* eslint-disable react/prop-types */
+import React from "react";
 
 
-export const Alerta = (evento) => {
-
-    evento.preventDefault()
-    if (nombre == '') {
-        alert('debe ingressar el nombre');
-    }
+const Alerta = ({message}) => {
+  return (
+    <>
+      {message && (
+        <div className={message.includes("exitoso") ? "alert-success" : "alert-danger"}>
+          {message}
+        </div>
+      )}
+    </>
+  );
 };
+
+export default Alerta;

@@ -2,25 +2,35 @@ import { useState } from "react";
 import "./Formulario.css";
 import Button from "react-bootstrap/Button";
 
-const Formulario = (alerta) => {
+const Formulario = ({ onSubmit }) => {
   const [nombre, setNombre] = useState("");
   const [tuemail, setTuemail] = useState("");
   const [password, setPassword] = useState("");
   const [configPassword, setconfigPassword] = useState("");
+  const [alertMessage, setAlertMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (nombre === '' || tuemail === '' || password === '' || configPassword === '') {
+      setAlertMessage("Debe completar todos los campos.");
+    } else {
+  
+      setAlertMessage("¡Registro exitoso!");
+    }
+
+    onSubmit(alertMessage);
   };
   return (
     <>
-      <form onSubmit={handleSubmit}>
-
-        <div className="form-regist" onSubmit={alerta}>
+        <form onSubmit={handleSubmit}>
+        <div className="form-regist">
           <input
             type="text"
-            name= {nombre}
-            onChange={(e) => console.log(setNombre(e.target.value))}
-            placeholder="Nombre" />
+            value={nombre}
+            onChange={(e) => setNombre(e.target.value)}
+            placeholder="Nombre"
+          />
           <input
             type="email"
             value={tuemail}
